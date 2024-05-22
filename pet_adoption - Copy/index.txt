@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Name | Home</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="body-container">
+    <div class="body-content">
+      <div class="top-border"></div>
+      <header>
+        <div class="site-identity">
+          <img src="imgs/logo.png" alt="Site Logo" id="header-logo" />
+        </div>
+
+        <nav id="header-nav">
+          <i class="fa fa-times nav-close" onclick="hideMenuLinks()"></i>
+          <ul>
+            <li><a href="#" title="">Home</a></li>
+            <li><a href="" title="">Link</a></li>
+            <li><a href="" title="">Link</a></li>
+            <li><a href="" title="">Link</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-navigation">
+          <i class="fa fa-search" onclick="showSearchBar()"></i>
+          <i class="fa fa-times search-close" onclick="hideSearchBar()"></i>
+          <input type="search" id="header-search-box" placeholder="What can we assist you with?">
+
+          <i class="fa fa-bars" onclick="showMenuLinks()"></i>
+        </div>
+      </header>
+
+      <section class="banner">
+        <div class="overlay">
+          <div class="banner-content">
+            <div class="container">
+              <h1 class="banner-title">Lorem ipsum dolor sit</h1>
+              <p class="banner-subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="banner-form">
+          <h1 class="banner-form-slogan">Begin the search for your life-long best friend.</h1>
+          <!-- <form action="#">
+            <label for="pet-list">I am looking for a:</label>
+            <select name="pet-list" id="pet-select">
+              <option value="li">Select your pet...</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+
+            <label for="zip">What is your zip code:</label>
+            <input type="number" name="zip" id="zip"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              maxlength="5">
+
+            <a href="selectedPet.html" id="banner-form-submit-btn">Search</a>
+          </form> -->
+          <div class="banner-btns">
+            <a href="selectedDog.html" class="pet-select-btn" id="dog">Dog</a>
+            <a href="selectedPet.html" class="pet-select-btn" id="cat">Cat</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="who-we-are">
+        <div class="container">
+          <h1 class="section-title">Who Are We?</h1>
+          <p>
+            Welcome to [Company Name], your number one source for cat and dog adoption. We're dedicated to providing you the fastest process, with a focus on dependability, customer service, and affordability. <br ><br>
+          </p>
+          <p>
+            We're working hard to find loving homes for these wonderful pets. We know you're going to love them just as much as we know they are going to love you.
+          </p>
+        </div>
+      </section>
+
+      <section class="why-choose-us">
+        <div class="container">
+          <h1 class="section-title">Why Choose Us?</h1>
+          <p>
+            We do our best to ensure a smooth and easy transition throughout the adoption process. We offer the cheapest prices, and even have payment plans so that we can minimalize the financial burden. <br ><br>
+          </p>
+          <p>
+            Safety and health are our number one priority. Your pets will receive basic training and know basic commands before you meet them. In addition, their first shots are on us! 
+          </p>
+        </div>
+      </section>
+
+      <!-- <section class="featured-pets">
+      <h3>Featured Pets</h3>
+    </section> -->
+    </div>
+
+    <footer>
+      <nav id="footer-nav">
+        <ul>
+          <li><a href="#" title="View and Adopt a pet">View/Adopt a pet</a></li>
+          <li><a href="#" title="Learn more about process">Learn about the process</a></li>
+          <li><a href="#" title="Learn more about process">A third link</a></li>
+          <li><a href="#" title="Learn more about process">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="social-links">
+        <a href="#"><i class="fa fa-facebook-f"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-google"></i></a>
+      </div>
+
+      <p id="copyright">&copy; Copyright 2021 Marcus Lundy</p>
+      </nav>
+
+    </footer>
+  </div>
+
+  <script src="js/myScript.js"></script>
+</body>
+
+</html>

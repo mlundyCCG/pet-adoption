@@ -1,0 +1,122 @@
+/*Variables*/
+let bannerZipInput = document.getElementById("zip");
+let bannerSubmitBtn = document.getElementById("banner-form-submit-btn");
+let petList = document.getElementById("pet-select");
+let valid = false;
+
+/*Helper Functions*/
+let fetchData = async (url,func) => {
+  let res = await fetch(url);
+  let data = await res.json();
+
+  func(data);
+}
+
+/*Functions*/
+function showMenuLinks() {
+  document.getElementById("header-nav").style.width = "250px";
+}
+
+function hideMenuLinks() {
+  document.getElementById("header-nav").style.width = "0px";
+}
+
+function showSearchBar() {
+  document.getElementById("header-search-box").style.display = "block";
+  document.getElementById("header-search-box").style.width = "200px";
+  document.getElementsByClassName("site-identity")[0].style.display = "none";
+  document.getElementsByClassName("fa-search")[0].style.display = "none";
+  document.getElementsByClassName("search-close")[0].style.display = "block";
+  document.getElementsByClassName("fa-bars")[0].style.position = "absolute";
+  document.getElementsByClassName("fa-bars")[0].style.top = "50%";
+  document.getElementsByClassName("fa-bars")[0].style.right = "1.25em";
+  document.getElementsByClassName("fa-bars")[0].style.transform = "translate(-50%, -50%)";
+}
+
+function hideSearchBar() {
+  document.getElementById("header-search-box").style.display = "none";
+  document.getElementById("header-search-box").style.width = "0";
+  document.getElementsByClassName("site-identity")[0].style.display = "flex";
+  document.getElementsByClassName("fa-search")[0].style.display = "block";
+  document.getElementsByClassName("search-close")[0].style.display = "none";
+  document.getElementsByClassName("fa-bars")[0].style.position = "static";
+  document.getElementsByClassName("fa-bars")[0].style.top = "0%";
+  document.getElementsByClassName("fa-bars")[0].style.transform = "translate(0%, 0%)";
+}
+
+/**
+ * Displays different pets depending on which one was selected
+ * @param {Option} petSelected - The type of pet selected from the banner dropdown
+ */
+function displayDogs() {
+  fetchData("https://dog.ceo/api/breeds/image/random", showDogImg);
+}
+
+function showDogImg(data) {
+  let photo = "";
+  photo += `<div class='dog-listing'>
+      <img src='${data.message}' class="dog-pic"/>
+      <div class="dog-info">
+        <p>Sctyyotkmpd</p>
+        <p>${generateRandomNumber()} year(s) old</p>
+      </div>
+    </div>
+  `;
+  document.getElementById("here").innerHTML = photo;
+}
+
+// function validateBannerForm() {
+//   let petListIndex = petList.selectedIndex;
+
+//   if (bannerZipInput.value.length < 5 && petListIndex == 0) {
+//     bannerZipInput.style.background = "rgba(255,0,0,.5)";
+//     petList.style.background = "rgba(255,0,0,.5)";
+//   } else if (bannerZipInput.value.length < 5) {
+//     bannerZipInput.style.background = "rgba(255,0,0,.5)";
+//     petList.style.background = "white";
+//   } else if (petListIndex == 0) {
+//     petList.style.background = "rgba(255,0,0,.5)";
+//     bannerZipInput.style.background = "white";
+//   } else {
+//     bannerZipInput.style.background = "white";
+//     petList.style.background = "white";
+//     valid = true;
+//   }
+// }
+
+function generateRandomNumber() {
+  return Math.floor((Math.random() * 10) + 1)
+}
+
+
+function getSessionVariable(variable) {
+  let x = sessionStorage.getItem(variable);
+
+  return x;
+}
+
+// displayDogs(getSessionVariable("selectedPet"));
+
+// /******************************************
+//  ************ Event Listeners *************
+//  **************************************  */
+
+
+// bannerSubmitBtn.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   let petListOptions = petList.options;
+//   let petListIndex = petList.selectedIndex;
+//   let pet = petListOptions[petListIndex].text;
+//   validateBannerForm();
+
+//   if(valid == true) {
+//     valid = false;
+
+//     alert(`The selected option is ${pet}`);
+//     sessionStorage.setItem("selectedPet", pet);
+//     location.href = "/selectedPet.html";
+//     alert(getSessionVariable("selectedPet"));
+//   }
+// });
+
+displayDogs();

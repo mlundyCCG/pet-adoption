@@ -1,0 +1,412 @@
+/*Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/*Global Styles*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  position: relative;
+}
+
+body {
+  font-family: 'montserrat', sans-serif;
+  min-width: 320px;
+  /* background: antiquewhite; */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.body-container {
+  position: relative;
+  min-height: 100%;
+}
+
+.body-content {
+  padding-bottom: 34vh;
+}
+
+.container {
+  padding: 0em 2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+.section-title {
+  color: #bd9051;
+  margin-bottom: .5em;
+  text-align: center;
+}
+
+p {
+  font-size: .8rem;
+}
+
+/*Top Border styling*/
+.top-border {
+  background: #bd9051;
+  width: 100%;
+  height: 3vh;
+  margin-bottom: .2em;
+  box-shadow: 2px 2px 2px gray;
+}
+
+/*Header Styling*/
+header {
+  width: 100%;
+  height: 10vh;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em 2em;
+  box-shadow: 2px 2px 2px gray;
+  position: relative;
+}
+
+#header-logo {
+  width: 130px;
+  margin-right: 1em;
+}
+
+.fa-bars, .fa-search, .fa-times{
+  font-size: 1.2rem;
+}
+
+#header-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  right: 0;
+  background: #333333;
+  overflow-x: hidden;
+  transition: all .5s;
+}
+
+.nav-close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  color: white;
+}
+
+#header-nav ul {
+  list-style: none;
+  text-align: center;
+  padding-top: 4em;
+}
+
+#header-nav li {
+  margin-bottom: 1em;
+}
+
+#header-nav li a {
+  font-size: 1.5rem;
+  color: white;
+  transition: all .3s;
+  font-size: 1rem;
+}
+
+#header-nav li a:visited {
+  color: white;
+}
+
+.header-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-bars, .fa-search {
+  color: #bd9051;
+}
+
+.fa-search {
+  margin-right: .75em;
+}
+
+.search-close {
+  display: none;
+}
+
+#header-search-box {
+  position: fixed;
+  left: 4em;
+  width: 200px;
+  padding: .25em;
+  display: none;
+  overflow-x: hidden;
+}
+
+/*Banner Styling*/
+.banner {
+  background: url("/imgs/pug.jpg") no-repeat top center;
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  position: relative;
+  margin-bottom: 15em;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.overlay {
+  background: rgba(0,0,0,.3);
+  width: 100%;
+  height: 60vh;
+  margin-bottom: 2em;
+}
+
+.banner-form {
+  position: absolute;
+  bottom: -47%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 255px;
+  z-index: 10;
+  text-shadow: none;
+  padding: 0em 1em;
+  background: white;
+  /* border: 3px solid #bd9051; */
+  border-radius: 20px;
+  box-shadow: 0 3px 10px gray;
+  max-width: 300px;
+}
+
+.banner-title {
+  font-size: 1.5rem;
+}
+
+.banner-form-slogan {
+  margin-bottom: 1em;
+  color: white;
+  text-align: center;
+  background: #bd9051;
+  margin: -.2em -1em 1em -1em;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 1em;
+  font-size: 1.1rem;
+}
+
+.banner-form label {
+  color: #bd9051;
+  font-size: .9rem;
+}
+
+.banner-form form select {
+  font-family: 'montserrat', Georgia, 'Times New Roman', Times, serif;
+  font-size: .75rem;
+  width: 100%;
+  border: 2px solid #bd9051;
+  margin: 0 0 1em 0;
+}
+
+#zip {
+  width: 100%;
+}
+
+#banner-form-submit-btn {
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #bd9051;
+  border: 2px solid black;
+  padding: .5em 1.5em;
+  border-radius: 8px;
+  color: white;
+}
+
+.banner-btns {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-right: -50%;
+}
+
+.pet-select-btn {
+  background: #bd9051;
+  border: 2px solid black;
+  padding: .5em 1.5em;
+  border-radius: 8px;
+  color: white;
+}
+
+/*Dogs Styling*/
+/* .dogs {
+  margin-bottom: 2em;
+}
+
+.box {
+  width: 100%;
+  height: 200px;
+  background: black;
+  margin-bottom: 2em;
+}
+
+.box1 {
+  background: url("/imgs/rottweilers.jpg") no-repeat center center;
+  background-size: cover;
+} */
+
+/*Who we are styling*/
+.who-we-are {
+  margin-bottom: 2em;
+}
+
+/*Why Choose Us styling*/
+.why-choose-us {
+  margin-bottom: 2em;
+}
+
+/*Featured Pets*/
+/* .featured-pets {
+  margin-bottom: 1em;
+  height: 70vh;
+} */
+
+/*Footer Styling*/
+footer {
+  position: absolute;
+  bottom: 0em;
+  background: #bd9051;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+  text-align: center;
+  color: white;
+}
+
+#footer-nav {
+  margin-bottom: .5em;
+}
+
+#footer-nav ul{
+  list-style: none;
+}
+
+footer a {
+  font-size: .8rem;
+  color: white;
+  transition: all .3s;
+  margin-bottom: .25em;
+}
+
+footer nav a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  height: 20px;
+  margin-bottom: 1em;
+}
+
+.social-links a {
+  margin: 0 .25em;
+}
+
+/* Selected Pet Stylings */
+#here {
+  width: 100%;
+  height: 125px;
+  margin: 1em 0;
+}
+
+#here::after {
+  clear: both;
+}
+
+.dog-pic {
+  width: 65%;
+}
+
+.dog-listing {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 1em;
+}
+
+.dog-info {
+  padding: 0 1em;
+}
+
+.dog-info p {
+  margin-bottom: .5em;
+}
+
+/* Media Queries */
+
+@media all and (min-width: 768px) {
+  .banner-content h2 {
+    font-size: 1.75rem;
+  }
+  .banner-content p {
+    font-size: 1rem;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .banner-content h2 {
+    font-size: 2rem;
+  }
+
+  .banner-content p {
+    font-size: 1.25rem;
+  }
+
+  .banner-form {
+    max-width: 500px;
+  }
+
+  .banner-form h4 {
+    font-size: 1.2rem;
+  }
+
+  .banner-form label {
+    font-size: 1rem;
+  }
+
+  #pet-select {
+    font-size: .85rem;
+  }
+
+  #pet-select > option {
+    font-size: .85rem;
+  }
+}
+
+

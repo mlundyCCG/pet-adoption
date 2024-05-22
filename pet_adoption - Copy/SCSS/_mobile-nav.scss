@@ -1,0 +1,34 @@
+@import "./variables";
+
+#mobile-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    right: 0;
+    background: #333;
+    overflow-x: hidden;
+    transition: all .5s;
+
+    ul {
+        list-style: none;
+        text-align: center;
+        padding-top: 4em;  
+        
+        li {
+            margin-bottom: 1em;
+
+            a {
+                font-size: 1.5rem;
+                color: white;
+                transition: all .3s;
+                font-size: 1rem;
+
+                &:visited {
+                    color: white;
+                }
+            }
+        }
+    }
+}

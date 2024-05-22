@@ -1,0 +1,102 @@
+@import "./variables";
+
+.banner {
+    width: 100%;
+    height: 60vh;
+    background: url('/imgs/pug.jpg') no-repeat center center;
+    background-size: cover;
+    margin-bottom: 13em;
+    position: relative;
+
+    &-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        line-height: 1.5;
+        color: #000;    
+    }
+
+    &-title {
+        text-shadow: 2px 2px 2px black;
+    }
+
+    &-form {
+        position: absolute;
+        bottom: -150px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: auto;
+        z-index: 10;
+        padding: 0em 1em;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 3px 10px gray;
+        max-width: 300px;
+
+        &-slogan {
+            color: #000;
+            text-align: center;
+            background: $tan;
+            margin: -.2em -.93em 1em -.93em;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            padding: 1em;
+            font-size: 1.1rem;
+        }
+
+        label {
+            color: #000;
+            font-size: .9rem;
+        }
+
+        form select {
+            font-family: 'montserrat', Georgia, 'Times New Roman', Times, serif;
+            width: 100%;
+            border: 2px solid #000;
+            margin: 0 0 1em 0;                      
+        }
+    }
+}
+  
+  .overlay {
+    background: rgba(0, 0, 0, .15);
+    width: 100%;
+    height: 60vh;
+  }
+  
+  #zip {
+    width: 100%;
+    margin-bottom: 1.5em;
+    padding: 0 2px;
+    font-family: 'montserrat', Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  #banner-form-submit-btn {
+    background: #fff;
+    border: 2px solid black;
+    padding: .25em 1em;
+    border-radius: 8px;
+    color: #000;
+    font-size: .9rem;
+    display: block;
+    margin: 0 auto 1em auto;
+    width: 40%;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'montserrat', Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: .1em;
+    transition: all .3s;
+
+    &:hover {
+        background: $tan;
+    }
+  }
+  
+  /* Pet Slideshow */
+  .pet-slideshow {
+    display: none;
+  }

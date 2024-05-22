@@ -1,0 +1,318 @@
+/*Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/*Global Styles*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  position: relative;
+}
+
+body {
+  font-family: 'montserrat', sans-serif;
+  min-width: 320px;
+  /* background: antiquewhite; */
+}
+
+.body-container {
+  position: relative;
+  min-height: 100%;
+}
+
+.push-footer {
+  height: 30vh;
+}
+
+/* Get rid of arrows on type=number boxes */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container {
+  padding: 0 2em;
+}
+
+.section-title {
+  color: #bd9051;
+  margin-bottom: .5em;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Top Bar */
+.top-bar {
+  width: 100%;
+  height: 3vh;
+  background: #bd9051;
+  box-shadow: 2px 2px 2px gray;
+  margin-bottom: .5em;
+}
+
+/* Header Styling */ 
+.header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 3em 2em 3.5em 2em;
+}
+
+.header-logo {
+  width: 20vh;
+}
+
+.header-logo img {
+  width: 90%;
+}
+
+#header-nav {
+  display: none;
+}
+
+.header-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#mobile-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  right: 0;
+  background: #333333;
+  overflow-x: hidden;
+  transition: all .5s;
+}
+
+#mobile-nav ul {
+  list-style: none;
+  text-align: center;
+  padding-top: 4em;
+}
+
+#mobile-nav li {
+  margin-bottom: 1em;
+}
+
+#mobile-nav li a {
+  font-size: 1.5rem;
+  color: white;
+  transition: all .3s;
+  font-size: 1rem;
+}
+
+#mobile-nav li a:visited {
+  color: white;
+}
+
+.nav-close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  color: white;
+}
+
+.fa-bars, .fa-search, .fa-times{
+  font-size: 1.2rem;
+}
+
+.fa-bars, .fa-search {
+  color: #bd9051;
+}
+
+.fa-search {
+  margin-right: .75em;
+}
+
+.search-close {
+  display: none;
+}
+
+#header-search-box {
+  position: fixed;
+  left: 4em;
+  width: 200px;
+  padding: .25em;
+  display: none;
+  overflow-x: hidden;
+}
+
+/* Banner Styling */
+.banner {
+  width: 100%;
+  height: 60vh;
+  background: url('/imgs/pug.jpg') no-repeat center center;
+  background-size: cover;
+  margin-bottom: 13em;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, .25);
+  width: 100%;
+  height: 60vh;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.banner-title {
+  text-shadow: 2px 2px 2px black;
+}
+
+/* Banner Form */
+.banner-form {
+  position: absolute;
+  bottom: -173px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: auto;
+  z-index: 10;
+  padding: 0em 1em;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px gray;
+  max-width: 300px;
+}
+
+.banner-form-slogan {
+  color: white;
+  text-align: center;
+  background: #bd9051;
+  margin: -.2em -.93em 1em -.93em;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 1em;
+  font-size: 1.1rem;
+}
+
+.banner-form label {
+  color: #bd9051;
+  font-size: .9rem;
+}
+
+.banner-form form select {
+  font-family: 'montserrat', Georgia, 'Times New Roman', Times, serif;
+  font-size: .75rem;
+  width: 100%;
+  border: 2px solid #bd9051;
+  margin: 0 0 1em 0;
+}
+
+#zip {
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+#banner-form-submit-btn {
+  background: #bd9051;
+  border: 2px solid black;
+  padding: .25em 1em;
+  border-radius: 8px;
+  color: white;
+  font-size: .95rem;
+  display: block;
+  margin: 0 auto 1em auto;
+  width: 40%;
+  text-align: center;
+}
+
+/* Pet Slideshow */
+.pet-slideshow {
+  display: none;
+}
+
+/* Who we are styling */
+.who-we-are {
+  margin-bottom: 2em;
+}
+
+.description {
+  font-size: .9rem;
+}
+
+/*Why Choose Us styling*/
+.why-choose-us {
+  margin-bottom: 2em;
+}
+
+/*Footer Styling*/
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  background: #bd9051;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+  text-align: center;
+  color: white;
+}
+
+#footer-nav {
+  margin-bottom: .5em;
+}
+
+#footer-nav ul{
+  list-style: none;
+}
+
+#footer-nav li{
+  margin-bottom: .25em;
+}
+
+#footer-nav a {
+  font-size: .85rem;
+  color: white;
+  transition: all .3s;
+  margin-bottom: .25em;
+}
+
+footer nav a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  height: 20px;
+  margin-bottom: 1em;
+}
+
+.social-links a {
+  margin: 0 .25em;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+#copyright {
+  font-size: .85rem;
+}
+
+

@@ -1,0 +1,59 @@
+/*Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import "./variables";
+
+/*Global Styles*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  position: relative;
+}
+
+body {
+  font-family: 'montserrat', sans-serif;
+  min-width: 320px;
+  // max-width: 425px;
+}
+
+.body-container {
+  position: relative;
+  min-height: 100%;
+}
+
+.push-footer {
+  height: 30vh;
+}
+
+/* Get rid of arrows on type=number boxes */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container {
+  padding: 0 2em;
+  margin-bottom: 1em;
+}
+
+.section-title {
+  color: $tan;
+  margin-bottom: .5em;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+@import "./header";
+@import "./banner";
+@import "./home-main-content";
+@import "./subpage-content";
+@import "./media-queries";
+@import "./footer";

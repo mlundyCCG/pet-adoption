@@ -1,0 +1,30 @@
+@import "./variables";
+
+.section-title {
+    color: #000;
+}
+
+.who-we-are {
+    margin-bottom: 2em;
+}
+  
+.description {
+    font-size: .9rem;
+}
+  
+.why-choose-us {
+    margin-bottom: 2em;
+}
+
+.home-faqs h3 {
+    margin-bottom: 1em;
+}
+
+.animal-pics {
+    margin-bottom: 2em;
+
+    #dog-pics {
+        display: block;
+        text-align: center;
+    }
+}
